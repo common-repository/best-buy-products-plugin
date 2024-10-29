@@ -1,0 +1,71 @@
+
+.categories {
+    margin-left: 4em;
+    clear: left;
+}
+
+.categories-root {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.category {
+    clear: left;
+}
+
+.category > .name {
+    padding: 0.1em 0.2em;
+    cursor: pointer;
+}
+
+.category > .disclosure {
+    float: left;
+    margin: 0.2em 0.4em 0.4em 0.4em;
+    background: url('images/disclosure-triangle.png') no-repeat top left;
+    width: 12px;
+    height: 12px;
+}
+
+.category.active > .disclosure {
+    background-position: 0 -12px;
+}
+
+.category.expanded > .disclosure {
+    background-position: -12px 0;
+}
+
+.category.active.expanded > .disclosure {
+    background-position: -12px -12px;
+}
+
+.category.empty > .disclosure {
+    background-position: 12px 12px !important;
+}
+
+.category.selected > .name {
+    background-color: #797076;
+    color: white;
+}
+
+.category > .children {
+    padding-left: 1em;
+    clear: both;
+    display: none;
+}
+
+.category.loading:before {
+    content: url('images/loading.gif');
+    position: relative; 
+    float: right;
+    left: -16px;
+    top: 2px;
+}
+
+.category-selected-name {
+    display: inline;
+    font-weight: normal;
+}
+
+.wp-admin .bby-popup {
+    left: -16em;
+}
